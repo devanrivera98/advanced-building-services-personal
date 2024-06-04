@@ -10,6 +10,11 @@ export default {
       LogoGray: '#4E5059',
       PhBlue: '#0978A0',
     },
+    fontFamily: {
+      hind: ['Hind', 'san-serif'],
+      oxygen: ['Oxygen', 'san-serif'],
+      maven: ['Maven+Pro', 'san-serif'],
+    },
   },
   plugins: [],
 };
