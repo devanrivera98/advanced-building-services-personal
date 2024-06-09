@@ -1,4 +1,5 @@
 import './services.css';
+import ServiceCard from './ServiceCard';
 
 export default function Services() {
   return (
@@ -15,34 +16,18 @@ export default function Services() {
         <div>
           <h1 className="pb-3 text-xl">Commercial HVAC</h1>
           <div className="">
-            <div className="pb-5">
-              <div>
-                <img src="./images/services-a1.png" />
-              </div>
-              <div>
-                <h1 className="py-2 text-lg">
-                  Customized HVAC Services Contracting
-                </h1>
-                <span>
-                  Body text for whatever you'd like to say. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
-                </span>
-              </div>
-            </div>
-            <div className="py-5">
-              <div>
-                <img src="./images/services-a2.png" />
-              </div>
-              <div>
-                <h1 className="py-2 text-lg">
-                  Daily Boiler Engineering Inspections
-                </h1>
-                <span>
-                  Body text for whatever you'd like to claim. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
-                </span>
-              </div>
-            </div>
+            <ServiceCard
+              title={'Customized HVAC Services Contracting'}
+              text={`Body text for whatever you'd like to say. Add main takeaway
+            points, quotes, anecdotes, or even a very very short story.`}
+              image={'./images/services-a1.png'}
+            />
+            <ServiceCard
+              title={'Daily Broiler Engineering Inspections'}
+              text={`Body text for whatever you'd like to claim. Add main takeaway
+            points, quotes, anecdotes, or even a very very short story.`}
+              image={'./images/services-a2.png'}
+            />
           </div>
         </div>
       </section>
