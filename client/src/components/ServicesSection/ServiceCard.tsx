@@ -7,9 +7,9 @@ interface Card {
 export default function ServiceCard({ title, text, image }: Card) {
   return (
     <>
-      <div className="pb-5">
+      <div className="pb-5 service-card-container">
         <div>
-          <img src={image} />
+          <img className="w-full" src={image} />
         </div>
         <div>
           <h1 className="py-2 text-lg">{title}</h1>

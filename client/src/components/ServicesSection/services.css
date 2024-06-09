@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
-@media screen and (width >= 950px) {
-  max-width: 1110px;
+.service-card-container {
+  width: 100%;
+}
+
+@media screen and (width >= 1024px) {
+  .service-card-container {
+    width: 40%;
+  }
 }
