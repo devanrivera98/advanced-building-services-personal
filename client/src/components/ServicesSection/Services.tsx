@@ -1,5 +1,5 @@
 import './services.css';
-import ServiceCard from './ServiceCard';
+import AllServiceCards from './AllServiceCards';
 
 export default function Services() {
   return (
@@ -15,8 +15,8 @@ export default function Services() {
         </div>
         <div>
           <h1 className="pb-3 text-xl">Commercial HVAC</h1>
-          <div className="lg:flex lg:justify-between">
-            <ServiceCard
+          <div className="lg:flex flex-wrap lg:justify-between">
+            {/* <ServiceCard
               title={'Customized HVAC Services Contracting'}
               text={`Body text for whatever you'd like to say. Add main takeaway
             points, quotes, anecdotes, or even a very very short story.`}
@@ -27,7 +27,8 @@ export default function Services() {
               text={`Body text for whatever you'd like to claim. Add main takeaway
             points, quotes, anecdotes, or even a very very short story.`}
               image={'./images/services-a2.png'}
-            />
+            /> */}
+            <AllServiceCards />
           </div>
         </div>
       </section>
