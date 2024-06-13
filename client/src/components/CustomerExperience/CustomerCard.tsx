@@ -13,13 +13,16 @@ export default function CustomerCard({
 }: card) {
   return (
     <>
-      <div className="bg-white rounded">
-        <div>
-          <blockquote>"{quote}"</blockquote>
+      <div className="bg-white p-5 rounded customer-card-container">
+        <div className="pb-10">
+          <q>{quote}</q>
         </div>
-        <div>
-          <div>
-            <img src={profileImage} />
+        <div className="flex">
+          <div className="pr-4">
+            <img
+              src={profileImage}
+              className="shrink-0 h-12 w-12 rounded-full"
+            />
           </div>
           <div>
             <h1>{name}</h1>

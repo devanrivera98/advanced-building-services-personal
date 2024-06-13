@@ -1,0 +1,10 @@
+.customer-section {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (width >=1024px) {
+  .customer-card-container {
+    width: 32%;
+  }
+}
