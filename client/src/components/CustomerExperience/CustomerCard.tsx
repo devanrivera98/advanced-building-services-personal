@@ -13,9 +13,9 @@ export default function CustomerCard({
 }: card) {
   return (
     <>
-      <div className="bg-white p-5 rounded customer-card-container">
+      <div className="bg-white p-5 rounded-lg customer-card-container">
         <div className="pb-10">
-          <q>{quote}</q>
+          <q className="font-maven text-xl font-bold">{quote}</q>
         </div>
         <div className="flex">
           <div className="pr-4">
@@ -25,8 +25,8 @@ export default function CustomerCard({
             />
           </div>
           <div>
-            <h1>{name}</h1>
-            <span>{description}</span>
+            <h1 className="font-hind text-lg font-medium">{name}</h1>
+            <span className="font-maven">{description}</span>
           </div>
         </div>
       </div>

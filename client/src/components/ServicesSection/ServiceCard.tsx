@@ -13,8 +13,8 @@ export default function ServiceCard({ title, text, image, id }: Card) {
           <img className="w-full" src={image} />
         </div>
         <div>
-          <h1 className="py-2 text-lg font-semibold">{title}</h1>
-          <span>{text}</span>
+          <h1 className="py-2 text-lg font-bold font-maven">{title}</h1>
+          <span className="font-maven">{text}</span>
         </div>
       </div>
     </>

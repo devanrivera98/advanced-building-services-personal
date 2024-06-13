@@ -4,11 +4,13 @@ import './customerExperience.css';
 export default function CustomerExperience() {
   return (
     <>
-      <div className="bg-BrandBlue py-5">
+      <div className="bg-BrandBlue py-10">
         <div className="customer-section">
           <div className="text-center pb-5">
-            <h1 className="text-white text-3xl py-1">CUSTOMER EXPERIENCE</h1>
-            <span className="text-white py-3">
+            <h1 className="text-white text-5xl py-5 font-hind">
+              CUSTOMER EXPERIENCE
+            </h1>
+            <span className="text-white py-3 text-2xl font-hind">
               We strive for experienced and diligent quantity for every project.
               What our clients are saying about us
             </span>

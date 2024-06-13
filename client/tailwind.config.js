@@ -14,7 +14,7 @@ export default {
     fontFamily: {
       hind: ['Hind', 'san-serif'],
       oxygen: ['Oxygen', 'san-serif'],
-      maven: ['Maven+Pro', 'san-serif'],
+      maven: ['Maven Pro', 'san-serif'],
     },
   },
   plugins: [],
