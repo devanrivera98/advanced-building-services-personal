@@ -15,25 +15,27 @@ export default function CustomerExperience() {
               What our clients are saying about us
             </span>
           </div>
-          <div className="flex justify-between">
-            <CustomerCard
-              quote="A terrific place of praise"
-              profileImage="./images/profile-icon.png"
-              name="Name"
-              description="Description of project or city"
-            />
-            <CustomerCard
-              quote="A fantastic bit of feedback"
-              profileImage="./images/profile-icon.png"
-              name="Name"
-              description="Description of project or city"
-            />
-            <CustomerCard
-              quote="A genuinely glowing review"
-              profileImage="./images/profile-icon.png"
-              name="Name"
-              description="Description of project or city"
-            />
+          <div className="flex justify-center">
+            <div className="flex flex-nowrap space-x-8 overflow-x-auto">
+              <CustomerCard
+                quote="A terrific place of praise"
+                profileImage="./images/profile-icon.png"
+                name="Name"
+                description="Description of project or city"
+              />
+              <CustomerCard
+                quote="A fantastic bit of feedback"
+                profileImage="./images/profile-icon.png"
+                name="Name"
+                description="Description of project or city"
+              />
+              <CustomerCard
+                quote="A genuinely glowing review"
+                profileImage="./images/profile-icon.png"
+                name="Name"
+                description="Description of project or city"
+              />
+            </div>
           </div>
         </div>
       </div>
