@@ -4,11 +4,11 @@
 }
 
 .customer-card-container {
-  min-width: 425px;
+  min-width: 300px;
 }
 
-/* @media screen and (width >=1024px) {
+@media screen and (width >=1024px) {
   .customer-card-container {
     min-width: 425px;
   }
-} */
+}
