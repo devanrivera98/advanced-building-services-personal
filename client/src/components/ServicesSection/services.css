@@ -1,0 +1,14 @@
+.service-section {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.service-card-container {
+  width: 100%;
+}
+
+@media screen and (width >= 1024px) {
+  .service-card-container {
+    width: 40%;
+  }
+}
