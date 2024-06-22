@@ -1,7 +1,7 @@
 export default function ContactForm() {
   return (
     <>
-      <div className="w-100">
+      <div className="w-full space-y-8">
         <div className="flex">
           <div className="w-1/2">
             <span className="font-bold">First Name*</span>
