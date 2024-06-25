@@ -6,7 +6,7 @@ export default function ContactPage() {
     <>
       <div className="contact-section">
         <div className="flex">
-          <div className="w-6/12">
+          <div className="w-full lg:w-6/12">
             <h1 className="font-hind text-4xl font-medium">How can we help?</h1>
             <div>
               <span className="block font-maven py-5">
@@ -18,7 +18,7 @@ export default function ContactPage() {
             </div>
             <ContactForm />
           </div>
-          <div className="w-6/12 flex flex-wrap justify-end">
+          <div className="hidden lg:w-6/12 lg:flex flex-wrap justify-end">
             <div className="w-10/12">
               <img src="./images/form-image.png" className="w-full" />
             </div>
