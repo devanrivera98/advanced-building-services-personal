@@ -68,10 +68,17 @@ export default function ContactForm() {
         <div>
           <div className="w-full lg:w-11/12">
             <span className="font-bold">Project type</span>
-            <input
-              className="outline outline-1 w-full pt-2 pb-1 pl-3 placeholder-BrandBlueText rounded"
-              placeholder="Select type"
-              required></input>
+            <select
+              className="outline outline-1 w-full lg:w-10/12 pt-2 pb-1 pl-3 text-BrandBlueText rounded h-9"
+              required
+              defaultValue="">
+              <option value="" disabled>
+                Select an option
+              </option>
+              <option value="Installation">Installation</option>
+              <option value="Maintenance">Maintenance</option>
+              <option value="Engineering">Engineering</option>
+            </select>
           </div>
         </div>
         <div>
