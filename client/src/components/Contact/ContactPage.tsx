@@ -4,6 +4,9 @@ import ContactForm from './ContactForm';
 export default function ContactPage() {
   return (
     <>
+      <div className="w-full lg:hidden pb-5">
+        <img className="w-full" src="./images/form-image-mobile.png" />
+      </div>
       <div className="contact-section">
         <div className="flex">
           <div className="w-full lg:w-6/12">
