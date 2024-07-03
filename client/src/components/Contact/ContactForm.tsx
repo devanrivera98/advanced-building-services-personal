@@ -40,6 +40,30 @@ export default function ContactForm({ onData }: ContactFormProps) {
     }));
   };
 
+  const formatPhoneNumber = (value: string) => {
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) {
+      return phoneNumber;
+    } else if (phoneNumberLength < 7) {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+    } else {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+        3,
+        6
+      )}-${phoneNumber.slice(6, 10)}`;
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    const formattedPhoneNumber = formatPhoneNumber(value);
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: formattedPhoneNumber,
+    }));
+  };
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleSubmit();
@@ -126,8 +150,9 @@ export default function ContactForm({ onData }: ContactFormProps) {
                   className="outline outline-1 w-full lg:w-10/12 pt-2 pb-1 pl-3 placeholder-BrandBlueText rounded"
                   placeholder="(XXX) XXX-XXXX"
                   name="userPhone"
+                  inputMode="numeric"
                   value={formData.userPhone}
-                  onChange={handleChange}
+                  onChange={handlePhoneChange}
                   required></input>
               </div>
               <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
