@@ -12,7 +12,11 @@ interface FormInterface {
   projectDetails: string;
 }
 
-export default function ContactForm() {
+interface ContactFormProps {
+  onData: (data: boolean) => void;
+}
+
+export default function ContactForm({ onData }: ContactFormProps) {
   const [formData, setFormData] = useState<FormInterface>({
     firstName: '',
     lastName: '',
@@ -38,8 +42,7 @@ export default function ContactForm() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    console.log(e.currentTarget);
+    handleSubmit();
 
     emailjs
       .send(
@@ -56,6 +59,12 @@ export default function ContactForm() {
           console.log('FAILED...', error.text);
         }
       );
+  };
+
+  const handleSubmit = () => {
+    onData(true);
+    window.scrollTo(0, 0);
+    console.log();
   };
 
   return (
@@ -122,7 +131,7 @@ export default function ContactForm() {
                   required></input>
               </div>
               <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
-                <span className="font-bold">Preferred contact method</span>
+                <span className="font-bold">Preferred contact method*</span>
                 <select
                   className="outline outline-1 w-full lg:w-10/12 pt-2 pb-1 pl-3 text-BrandBlueText rounded h-9"
                   required
@@ -140,7 +149,7 @@ export default function ContactForm() {
           </div>
           <div>
             <div className="w-full lg:w-11/12">
-              <span className="font-bold">Project type</span>
+              <span className="font-bold">Project type*</span>
               <select
                 className="outline outline-1 w-full pt-2 pb-1 pl-3 text-BrandBlueText rounded h-9"
                 required

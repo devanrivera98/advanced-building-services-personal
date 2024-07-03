@@ -1,7 +1,15 @@
 import './contactPage.css';
 import ContactForm from './ContactForm';
+import { useState } from 'react';
 
 export default function ContactPage() {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+  const handleFormData = (onData: boolean) => {
+    setIsFormSubmitted(onData);
+    console.log(isFormSubmitted);
+  };
+
   return (
     <>
       <div className="w-full lg:hidden pb-5">
@@ -10,16 +18,31 @@ export default function ContactPage() {
       <div className="contact-section">
         <div className="flex">
           <div className="w-full lg:w-6/12">
-            <h1 className="font-hind text-4xl font-medium">How can we help?</h1>
-            <div>
-              <span className="block font-maven py-5">
-                Once we receive the details of your project, a representative
-                will reach out to schedule a meeting. We look forward to
-                partnering with you.
-              </span>
-              <span className="block pb-5">*Required Fields</span>
-            </div>
-            <ContactForm />
+            {isFormSubmitted ? (
+              <div className="pt-5">
+                <h1 className="font-hind text-4xl font-medium">
+                  Message received
+                </h1>
+                <span className="block pt-10">
+                  A member of our team will reach out soon.
+                </span>
+              </div>
+            ) : (
+              <>
+                <h1 className="font-hind text-4xl font-medium">
+                  How can we help?
+                </h1>
+                <div>
+                  <span className="block font-maven py-5">
+                    Once we receive the details of your project, a
+                    representative will reach out to schedule a meeting. We look
+                    forward to partnering with you.
+                  </span>
+                  <span className="block pb-5">*Required Fields</span>
+                </div>
+                <ContactForm onData={handleFormData} />
+              </>
+            )}
           </div>
           <div className="hidden lg:w-6/12 lg:flex flex-wrap justify-end">
             <div className="w-10/12">
