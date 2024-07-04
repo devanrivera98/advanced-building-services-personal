@@ -1,20 +1,8 @@
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-
-interface FormInterface {
-  firstName: string;
-  lastName: string;
-  role: string;
-  userEmail: string;
-  userPhone: string;
-  contactMethod: string;
-  projectType: string;
-  projectDetails: string;
-}
-
-interface ContactFormProps {
-  onData: (data: boolean) => void;
-}
+import { formatPhoneNumber } from './functions/formatPhoneNumber';
+import FormInterface from './Interfaces/FormInterface';
+import ContactFormProps from './Interfaces/ContactFormProps';
 
 export default function ContactForm({ onData }: ContactFormProps) {
   const [formData, setFormData] = useState<FormInterface>({
@@ -38,21 +26,6 @@ export default function ContactForm({ onData }: ContactFormProps) {
       ...prevFormData,
       [name]: value,
     }));
-  };
-
-  const formatPhoneNumber = (value: string) => {
-    const phoneNumber = value.replace(/[^\d]/g, '');
-    const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) {
-      return phoneNumber;
-    } else if (phoneNumberLength < 7) {
-      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
-    } else {
-      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
-        3,
-        6
-      )}-${phoneNumber.slice(6, 10)}`;
-    }
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -88,7 +61,6 @@ export default function ContactForm({ onData }: ContactFormProps) {
   const handleSubmit = () => {
     onData(true);
     window.scrollTo(0, 0);
-    console.log();
   };
 
   return (
