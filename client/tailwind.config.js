@@ -6,6 +6,7 @@ export default {
     colors: {
       BrandRed: '#BF0101',
       BrandBlue: '#183B61',
+      BrandBlueText: '#0978A0',
       Copy: '#0F2B35',
       LogoGray: '#4E5059',
       PhBlue: '#0978A0',
